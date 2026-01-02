@@ -33,7 +33,7 @@ import { FloatingButtons } from "./components/FloatingButtons";
 
 export default function App() {
     return (
-        <div className="min-h-screen">
+        <div className="min-h-screen w-screen overflow-x-hidden">
             <Hero />
             <JobPostings />
             <HiringProcess />
