@@ -152,7 +152,9 @@ export function FAQ() {
                         더 궁금한 점이 있으신가요?
                     </p>
                     <p className="text-slate-300 mb-6">
-                        언제든지 문의해주세요. 빠르게 답변드리겠습니다.
+                        언제든지 문의해주세요.&nbsp;
+                        <br className="md:hidden" />
+                        빠르게 답변드리겠습니다.
                     </p>
                     <a
                         href="https://open.kakao.com/o/szTaxr9h"
