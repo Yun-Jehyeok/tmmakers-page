@@ -72,10 +72,6 @@ const videos: Video[] = [
         url: "https://youtu.be/u8C0zNdrCao?si=iqn7nojdsAJFly3M",
     },
     {
-        title: "웹 기초 강의 영상",
-        url: "https://youtu.be/WnTQ_tIKZpA?si=0E6qPtVnyVKgy08u",
-    },
-    {
         title: "CS 강의 영상",
         url: "https://youtu.be/HYzwS_cSWMw?si=KxFAfJNdccRMNgYm",
     },
@@ -149,7 +145,9 @@ export function MentoringValue() {
                     className="text-center mb-16"
                 >
                     <h2 className="text-4xl md:text-5xl text-white mb-4 font-bold">
-                        현업 개발자의 조언을 실천합니다
+                        현업 개발자의&nbsp;
+                        <br className="md:hidden" />
+                        조언을 실천합니다
                     </h2>
                 </motion.div>
 
