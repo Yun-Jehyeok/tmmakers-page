@@ -57,7 +57,7 @@ const tracks: Track[] = [
         duration: "2개월 과정",
         badge: "협업 중심",
         features: [
-            "온라인 진행",
+            "온라인 진행 (Zep 상주 & 질문 가능)",
             "4인 1팀 구성",
             "Next, T-Q, Zustand 등 라이브 강의 제공",
             "Github 기반 코드 리뷰",
