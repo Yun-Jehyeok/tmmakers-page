@@ -5,6 +5,17 @@ import { ApplicationModal } from "./ApplicationModal";
 export function FloatingButtons() {
     const [isModalOpen, setIsModalOpen] = useState(false);
 
+    const onClickApply = () => {
+        if (window.gtag) {
+            window.gtag("event", "click_order_button", {
+                event_category: "engagement",
+                event_label: "order_button",
+            });
+        }
+
+        setIsModalOpen(true);
+    };
+
     return (
         <>
             <div className="fixed bottom-0 left-0 right-0 z-50 px-4 pb-4">
@@ -22,7 +33,7 @@ export function FloatingButtons() {
 
                     {/* 지원하기 버튼 */}
                     <button
-                        onClick={() => setIsModalOpen(true)}
+                        onClick={onClickApply}
                         className="flex-[2] md:flex-1 py-4 rounded-xl bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-600 hover:to-blue-600 text-white transition-all duration-300 cursor-pointer shadow-lg shadow-cyan-500/30"
                     >
                         <span className="font-bold">지금 신청하기</span>
