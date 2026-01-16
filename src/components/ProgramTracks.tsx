@@ -39,7 +39,7 @@ const tracks: Track[] = [
     {
         id: "basic",
         name: "기초 트랙",
-        price: "10만원",
+        price: "15만원",
         duration: "2개월 과정",
         badge: "유연한 시간",
         features: [
@@ -53,7 +53,7 @@ const tracks: Track[] = [
     {
         id: "project",
         name: "프로젝트 트랙",
-        price: "10만원",
+        price: "15만원",
         duration: "2개월 과정",
         badge: "협업 중심",
         features: [
@@ -68,7 +68,7 @@ const tracks: Track[] = [
     {
         id: "premium",
         name: "취업 트랙",
-        price: "15만원",
+        price: "20만원",
         duration: "2개월 과정",
         isPremium: true,
         badge: "소수 정예 5명",
