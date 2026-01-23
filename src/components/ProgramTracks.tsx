@@ -41,7 +41,6 @@ const tracks: Track[] = [
         name: "기초 트랙",
         price: "15만원",
         duration: "2개월 과정",
-        badge: "유연한 시간",
         features: [
             "하루 1시간 온라인 강의",
             "오전반: 10~11시 / 오후반: 20~21시",
@@ -55,7 +54,6 @@ const tracks: Track[] = [
         name: "프로젝트 트랙",
         price: "15만원",
         duration: "2개월 과정",
-        badge: "협업 중심",
         features: [
             "온라인 진행 (Zep 상주 & 질문 가능)",
             "4인 1팀 구성",
@@ -71,7 +69,6 @@ const tracks: Track[] = [
         price: "20만원",
         duration: "2개월 과정",
         isPremium: true,
-        badge: "소수 정예 5명",
         features: [
             "매일 오후 12시 ~ 6시 진행",
             "오프라인/온라인 반 선택 가능",
@@ -336,26 +333,6 @@ export function ProgramTracks() {
                                         : "bg-slate-900/50 border border-white/10 hover:border-white/20"
                                 }`}
                             >
-                                {/* Badge */}
-                                {track.badge && (
-                                    <div className="flex items-center gap-2 mb-4">
-                                        {track.isPremium ? (
-                                            <div className="flex items-center gap-2 px-3 py-1 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-full">
-                                                <Star className="w-4 h-4 text-white" />
-                                                <span className="text-xs text-white">
-                                                    {track.badge}
-                                                </span>
-                                            </div>
-                                        ) : (
-                                            <div className="px-3 py-1 bg-cyan-500/20 border border-cyan-500/30 rounded-full">
-                                                <span className="text-xs text-cyan-400">
-                                                    {track.badge}
-                                                </span>
-                                            </div>
-                                        )}
-                                    </div>
-                                )}
-
                                 {/* Track Name */}
                                 <h3
                                     className={`text-2xl mb-2 font-bold ${
@@ -421,7 +398,7 @@ export function ProgramTracks() {
                                                     >
                                                         {tech}
                                                     </span>
-                                                )
+                                                ),
                                             )}
                                         </div>
                                     </div>
@@ -602,7 +579,7 @@ export function ProgramTracks() {
                                                                 {item}
                                                             </span>
                                                         </li>
-                                                    )
+                                                    ),
                                                 )}
                                             </ul>
                                         </motion.div>
