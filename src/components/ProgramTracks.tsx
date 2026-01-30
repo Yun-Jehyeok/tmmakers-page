@@ -16,6 +16,7 @@ interface Track {
     id: string;
     name: string;
     price: string;
+    discountedPrice: string;
     duration: string;
     isPremium?: boolean;
     badge?: string;
@@ -40,6 +41,7 @@ const tracks: Track[] = [
         id: "basic",
         name: "기초 트랙",
         price: "15만원",
+        discountedPrice: "7.5만원",
         duration: "2개월 과정",
         features: [
             "하루 1시간 온라인 강의",
@@ -53,6 +55,7 @@ const tracks: Track[] = [
         id: "project",
         name: "프로젝트 트랙",
         price: "15만원",
+        discountedPrice: "7.5만원",
         duration: "2개월 과정",
         features: [
             "온라인 진행 (Zep 상주 & 질문 가능)",
@@ -67,6 +70,7 @@ const tracks: Track[] = [
         id: "premium",
         name: "취업 트랙",
         price: "20만원",
+        discountedPrice: "10만원",
         duration: "2개월 과정",
         isPremium: true,
         features: [
@@ -354,7 +358,19 @@ export function ProgramTracks() {
                                                     : "text-cyan-400"
                                             }`}
                                         >
-                                            월 {track.price}
+                                            월{" "}
+                                            <span className="line-through">
+                                                {track.price}
+                                            </span>
+                                        </span>
+                                        <span
+                                            className={`text-3xl ${
+                                                track.isPremium
+                                                    ? "text-cyan-400"
+                                                    : "text-cyan-400"
+                                            }`}
+                                        >
+                                            {track.discountedPrice}
                                         </span>
                                     </div>
                                     <p className="text-sm text-slate-400">

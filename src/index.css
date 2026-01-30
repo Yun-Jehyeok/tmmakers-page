@@ -2184,6 +2184,10 @@
         object-fit: cover;
     }
 
+    .line-through {
+        text-decoration: line-through;
+    }
+
     .p-3 {
         padding: calc(var(--spacing) * 3);
     }
