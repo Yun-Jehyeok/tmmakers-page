@@ -234,7 +234,8 @@ export function ProgramTracks() {
                                                     >
                                                         기초 강의 자료
                                                     </a>
-                                                ) : detailIndex === 3 ? (
+                                                ) : index === 0 &&
+                                                  detailIndex === 3 ? (
                                                     <a
                                                         href={detail}
                                                         target="_blank"
