@@ -19,6 +19,7 @@ const roadmapPhases: RoadmapPhase[] = [
             "라이브 강의 진행",
             "HTML / CSS / JavaScript / React 학습",
             "https://www.notion.so/319fbaff894c80398839db4982666ea7?source=copy_link",
+            "https://www.inflearn.com/course/introduction-to-fron?cid=341617",
         ],
         accent: "기초 다지기",
     },
@@ -234,6 +235,15 @@ export function ProgramTracks() {
                                                         className="text-sm leading-6 text-slate-200 underline"
                                                     >
                                                         기초 강의 자료
+                                                    </a>
+                                                ) : detailIndex === 3 ? (
+                                                    <a
+                                                        href={detail}
+                                                        target="_blank"
+                                                        rel="noopener noreferrer"
+                                                        className="text-sm leading-6 text-slate-200 underline"
+                                                    >
+                                                        강의 영상 샘플
                                                     </a>
                                                 ) : (
                                                     <span className="text-sm leading-6 text-slate-200">
