@@ -101,6 +101,19 @@ const slides: Slide[] = [
     },
 ];
 
+const dropOffReasons = [
+    "버티기 힘들어요",
+    "너무 어려워요",
+    "시간이 없어요",
+    "일과 병행이 어려워요",
+];
+
+const successHighlights = [
+    "피드백을 적극적으로 받아들이고 개선했습니다",
+    "주어진 커리큘럼을 성실히 수행했습니다",
+    "6개월 만에 모두 원하는 회사에 취업했습니다",
+];
+
 export function JobPostings() {
     const [currentSlide, setCurrentSlide] = useState(0);
     const [touchStart, setTouchStart] = useState<number | null>(null);
@@ -143,24 +156,54 @@ export function JobPostings() {
     return (
         <div className="relative w-full bg-slate-950 py-20 px-4">
             {/* Grid pattern overlay */}
-            <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.02)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.02)_1px,transparent_1px)] bg-[size:72px_72px]" />
+            <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.02)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.02)_1px,transparent_1px)] bg-size-[72px_72px]" />
 
             <div className="relative z-10 max-w-6xl mx-auto">
                 {/* Title */}
                 <h2 className="text-center text-4xl md:text-5xl text-white mb-4 font-bold">
-                    실제 채용 공고를&nbsp;
-                    <br className="md:hidden" />
-                    보신 적 있나요?
+                    검증된 결과
                 </h2>
 
                 {/* Subtitle */}
                 <p className="text-center text-lg text-slate-400 mb-16">
-                    채용 공고는 저희가 아는 현실과 다릅니다
+                    단 6개월, 취업 불경기 속 이뤄냈습니다
                 </p>
 
-                {/* Slider Container */}
                 <div className="relative max-w-5xl mx-auto">
-                    {/* Navigation Buttons */}
+                    {/* Cards */}
+                    <div
+                        className="grid grid-cols-1 md:grid-cols-2 gap-6"
+                        onTouchStart={onTouchStart}
+                        onTouchMove={onTouchMove}
+                        onTouchEnd={onTouchEnd}
+                    >
+                        {/* Job Posting Card */}
+                        <div className="bg-slate-900/50 backdrop-blur-sm border border-white/10 rounded-3xl p-8 flex flex-col justify-center">
+                            <div className="mb-6">
+                                <h3 className="text-xl md:text-2xl text-white text-center leading-snug">
+                                    서류 합격조차 되지 않던 전공자
+                                </h3>
+                            </div>
+                            <div className="text-cyan-400 text-2xl md:text-4xl font-bold text-center leading-tight">
+                                유명 코스닥 상장사 합격
+                            </div>
+                        </div>
+                        {/* Job Posting Card */}
+                        <div className="bg-slate-900/50 backdrop-blur-sm border border-white/10 rounded-3xl p-8 flex flex-col justify-center">
+                            <div className="mb-6">
+                                <h3 className="text-xl md:text-2xl text-white text-center leading-snug">
+                                    2년간 취업하지 못한 비전공자
+                                </h3>
+                            </div>
+                            <div className="text-cyan-400 text-2xl md:text-4xl font-bold text-center leading-tight">
+                                멘토링 6개월 만에 취업 성공
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                {/* Slider Container */}
+                {/* <div className="relative max-w-5xl mx-auto">
                     <button
                         onClick={prevSlide}
                         className="hidden lg:flex absolute left-0 top-1/2 -translate-y-1/2 -translate-x-16 z-20 w-12 h-12 rounded-full bg-slate-800/50 hover:bg-slate-700/50 border border-white/10 items-center justify-center transition-colors cursor-pointer"
@@ -177,14 +220,12 @@ export function JobPostings() {
                         <ChevronRight className="w-6 h-6 text-white" />
                     </button>
 
-                    {/* Cards */}
                     <div
                         className="grid grid-cols-1 md:grid-cols-2 gap-6"
                         onTouchStart={onTouchStart}
                         onTouchMove={onTouchMove}
                         onTouchEnd={onTouchEnd}
                     >
-                        {/* Job Posting Card */}
                         <div className="bg-slate-900/50 backdrop-blur-sm border border-white/10 rounded-3xl p-8">
                             <div className="mb-6">
                                 <p className="text-sm text-slate-400 mb-2">
@@ -209,12 +250,11 @@ export function JobPostings() {
                                                 {req}
                                             </span>
                                         </li>
-                                    )
+                                    ),
                                 )}
                             </ul>
                         </div>
 
-                        {/* Tech Stack Card */}
                         <div className="bg-slate-900/50 backdrop-blur-sm border border-white/10 rounded-3xl p-8">
                             <div className="mb-6">
                                 <p className="text-sm text-slate-400 mb-2">
@@ -253,7 +293,6 @@ export function JobPostings() {
                         </div>
                     </div>
 
-                    {/* Mobile Navigation Dots */}
                     <div className="flex lg:hidden justify-center gap-2 mt-8">
                         {slides.map((_, index) => (
                             <button
@@ -268,6 +307,67 @@ export function JobPostings() {
                             />
                         ))}
                     </div>
+                </div> */}
+            </div>
+
+            <div className="relative z-10 max-w-6xl mx-auto pt-40">
+                {/* Title */}
+                <h2 className="text-center text-4xl md:text-5xl text-white mb-4 font-bold">
+                    더 말이 필요한가요?
+                </h2>
+
+                {/* Subtitle */}
+                <p className="text-center text-lg text-slate-400 mb-16">
+                    물론 포기한 사람들도 있습니다
+                </p>
+
+                <div className="grid grid-cols-1 gap-6 text-white md:grid-cols-2">
+                    {dropOffReasons.map((reason, index) => (
+                        <div
+                            key={reason}
+                            className="rounded-3xl border border-white/10 bg-slate-900/50 p-8 backdrop-blur-sm"
+                        >
+                            <div className="flex items-center gap-4">
+                                <span className="text-sm font-semibold tracking-[0.18em] text-rose-300">
+                                    0{index + 1}
+                                </span>
+                                <span className="h-px flex-1 bg-white/10" />
+                            </div>
+                            <h3 className="mt-6 text-2xl text-white text-center font-semibold">
+                                {reason}
+                            </h3>
+                        </div>
+                    ))}
+                </div>
+
+                <div className="mt-8 rounded-3xl border border-cyan-400/20 bg-cyan-400/10 p-6 md:p-8">
+                    <p className="text-center text-3xl font-semibold tracking-[0.2em] text-cyan-300 max-md:tracking-[0.1em]">
+                        하지만 끝까지 <br className="block md:hidden" />
+                        포기하지 않은 분들은
+                    </p>
+                    <div className="mt-12 flex flex-col gap-3">
+                        {successHighlights.map((highlight) => (
+                            <div
+                                key={highlight}
+                                className="rounded-2xl border border-white/10 bg-slate-950/60 px-5 py-4 text-center text-lg leading-6 text-slate-200 max-md:text-[15px]"
+                            >
+                                {highlight}
+                            </div>
+                        ))}
+                    </div>
+                </div>
+
+                <div className="mt-20 rounded-[2rem] border border-white/10 bg-linear-to-r from-white/6 via-white/[0.03] to-white/6 px-6 py-8 text-center backdrop-blur-sm md:px-10 md:py-10">
+                    <p className="text-xs font-semibold uppercase tracking-[0.32em] text-cyan-300/80">
+                        Final Message
+                    </p>
+                    <p className="mt-4 text-2xl font-semibold leading-relaxed text-white md:text-3xl">
+                        포기하지 않는 의지만 있다면,
+                        <br className="block md:hidden" />
+                        <span className="text-cyan-300">
+                            저는 여러분을 반드시 취업시킬 자신이 있습니다.
+                        </span>
+                    </p>
                 </div>
             </div>
         </div>

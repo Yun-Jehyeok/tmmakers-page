@@ -36,11 +36,11 @@ export default function App() {
         <div className="min-h-screen w-screen overflow-x-hidden">
             <Hero />
             <JobPostings />
-            <HiringProcess />
-            <CurriculumComparison />
+            {/* <HiringProcess /> */}
+            {/* <CurriculumComparison /> */}
             <ProgramTracks />
             <RealityCheck />
-            <MentoringValue />
+            {/* <MentoringValue /> */}
             <Testimonials />
             <FAQ />
             <FloatingButtons />

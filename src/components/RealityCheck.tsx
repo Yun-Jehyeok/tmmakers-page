@@ -14,31 +14,11 @@ const messages: Message[] = [
         size: "large",
     },
     {
-        text: "솔직히 말씀드리겠습니다. 지금 채용 시장은 냉혹합니다.",
+        text: "저도 될지 몰랐습니다.",
         highlight: false,
     },
     {
-        text: "하지만 그 속에서도 합격하는 사람들이 있습니다.",
-        highlight: true,
-    },
-    {
-        text: "그들의 공통점은 '진짜 엔지니어'라는 것입니다.",
-        highlight: false,
-    },
-    {
-        text: "엔지니어는 단순히 코드를 작성하는 사람이 아닙니다.",
-        highlight: false,
-    },
-    {
-        text: "문제를 정의하고, 해결책을 설계하며, 더 나은 방법을 끊임없이 고민하는 사람입니다.",
-        highlight: true,
-    },
-    {
-        text: "그리고 그 모든 것의 시작은 탄탄한 기초입니다.",
-        highlight: false,
-    },
-    {
-        text: "트렌드만 쫓는 개발자가 아닌, 본질을 이해하는 엔지니어가 되어야 합니다.",
+        text: "하지만 전 결과를 만들었습니다.",
         highlight: true,
     },
 ];
@@ -198,9 +178,6 @@ export function RealityCheck() {
                                 <h3 className="text-xl text-white mb-2 font-bold">
                                     {principle.title}
                                 </h3>
-                                <p className="text-sm text-slate-400 leading-relaxed">
-                                    {principle.description}
-                                </p>
                             </motion.div>
                         );
                     })}
@@ -215,13 +192,16 @@ export function RealityCheck() {
                     className="text-center mt-16"
                 >
                     <p className="text-xl md:text-2xl text-slate-300 leading-relaxed">
-                        여러분이{" "}
+                        취업 의지만 식지 말아주세요.
+                    </p>
+                    <p className="text-xl md:text-2xl text-slate-300 leading-relaxed">
+                        반드시&nbsp;
                         <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-400 font-bold">
-                            진짜 엔지니어
+                            취업이 되는 인재
                         </span>
                         로&nbsp;
                         <br className="md:hidden" />
-                        성장할 수 있도록 돕겠습니다.
+                        만들어 드리겠습니다.
                     </p>
                 </motion.div>
             </div>

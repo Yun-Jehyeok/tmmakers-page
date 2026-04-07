@@ -1,9 +1,9 @@
 import { motion } from "motion/react";
-import { Calendar, ArrowRight, Clock } from "lucide-react";
+import { Calendar, Clock } from "lucide-react";
 
 export function Hero() {
     return (
-        <div className="relative min-h-screen w-full overflow-hidden bg-gradient-to-br from-slate-950 via-blue-950 to-slate-900">
+        <div className="relative min-h-screen w-full overflow-hidden bg-linear-to-br from-slate-950 via-blue-950 to-slate-900">
             {/* Animated background elements */}
             <div className="absolute inset-0 overflow-hidden">
                 <motion.div
@@ -33,7 +33,7 @@ export function Hero() {
             </div>
 
             {/* Grid pattern overlay */}
-            <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.02)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.02)_1px,transparent_1px)] bg-[size:72px_72px]" />
+            <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.02)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.02)_1px,transparent_1px)] bg-size-[72px_72px]" />
 
             {/* Content */}
             <div className="relative z-10 min-h-screen flex items-center justify-center px-4 py-20">
@@ -45,20 +45,13 @@ export function Hero() {
                         transition={{ duration: 0.5, delay: 0.1 }}
                         className="text-center mb-8"
                     >
-                        <div
-                            className="inline-block text-sm sm:text-base md:text-lg text-white mb-4 tracking-wide px-4 sm:px-6 py-2 bg-cyan-500/20 backdrop-blur-sm border border-cyan-400/30 relative"
-                            style={{
-                                clipPath:
-                                    "polygon(0.5rem 0%, calc(100% - 0.5rem) 0%, 100% 50%, calc(100% - 0.5rem) 100%, 0.5rem 100%, 0% 50%)",
-                            }}
-                        >
-                            내일을 만드는 사람들
-                        </div>
-                        <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-bold text-white mb-4 tracking-tight px-4">
-                            프론트엔드
+                        <h1 className="px-4 text-4xl leading-[1.25] font-bold tracking-tight text-white sm:text-5xl md:text-6xl md:leading-[1.2] mb-4">
+                            프론트엔드 개발자가&nbsp;
+                            <br className="hidden max-md:block" />
+                            되고 싶나요?
                             <br />
-                            <span className="bg-gradient-to-r from-cyan-400 via-blue-500 to-blue-600 bg-clip-text text-transparent">
-                                취업 멘토링 3기
+                            <span className="bg-linear-to-r from-cyan-400 via-blue-500 to-blue-600 bg-clip-text text-transparent">
+                                모든 것을 알려드립니다
                             </span>
                         </h1>
                     </motion.div>
@@ -70,7 +63,11 @@ export function Hero() {
                         transition={{ duration: 0.5, delay: 0.2 }}
                         className="text-center text-base sm:text-lg md:text-xl lg:text-2xl text-slate-300 mb-12 px-4"
                     >
-                        진짜 취업에 필요한 내용을 모두 담았습니다.
+                        <b>취업 불경기 속에서도 검증된 멘토링</b>
+                        <br />
+                        체계적인 커리큘럼과 24시간 멘토링으로{" "}
+                        <br className="hidden max-md:block" />
+                        여러분의 취업을 책임집니다
                     </motion.p>
 
                     {/* Info Cards */}
@@ -84,10 +81,10 @@ export function Hero() {
                             <Calendar className="w-4 h-4 sm:w-5 sm:h-5 text-cyan-400 flex-shrink-0" />
                             <div className="text-left">
                                 <div className="text-xs text-slate-400 mb-1">
-                                    교육 기간
+                                    멘토링 기간
                                 </div>
                                 <div className="text-sm sm:text-base text-white">
-                                    26년 2월 23일 - 26년 4월 19일
+                                    26년 5월 01일 - 취업 될 때까지
                                 </div>
                             </div>
                         </div>
@@ -95,13 +92,10 @@ export function Hero() {
                             <Clock className="w-4 h-4 sm:w-5 sm:h-5 text-cyan-400 flex-shrink-0" />
                             <div className="text-left">
                                 <div className="text-xs text-slate-400 mb-1">
-                                    교육 시간
+                                    멘토링 시간
                                 </div>
                                 <div className="text-sm sm:text-base text-white mb-1">
-                                    10:00 - 19:00
-                                </div>
-                                <div className="text-xs text-slate-400">
-                                    * 선택하신 트랙에 따라 변동됩니다
+                                    24시간 언제나
                                 </div>
                             </div>
                         </div>
@@ -112,7 +106,7 @@ export function Hero() {
                                     지원 마감
                                 </div>
                                 <div className="text-sm sm:text-base text-white mb-1">
-                                    26년 2월 15일
+                                    26년 4월 26일(일)
                                 </div>
                                 <div className="text-xs text-slate-400">
                                     * 조기마감 될 수 있습니다
