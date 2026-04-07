@@ -182,10 +182,10 @@ export function ProgramTracks() {
 
                         <div className="rounded-2xl border border-cyan-400/20 bg-cyan-400/10 px-5 py-4">
                             <p className="text-xs font-semibold uppercase tracking-[0.24em] text-cyan-300">
-                                총 기간
+                                금액
                             </p>
                             <p className="mt-2 text-2xl font-bold text-white">
-                                2026.05.01 ~ 취업 시점까지
+                                월 250,000원
                             </p>
                         </div>
                     </div>
