@@ -10,10 +10,22 @@ interface ApplicationModalProps {
 const PROJECT_ID = import.meta.env.VITE_PROJECT_ID;
 const PUBLIC_ANON_KEY = import.meta.env.VITE_PUBLIC_ANON_KEY;
 
+const formatPhoneNumber = (value: string) => {
+    const digits = value.replace(/\D/g, "").slice(0, 11);
+
+    if (digits.length <= 3) return digits;
+    if (digits.length <= 7) {
+        return `${digits.slice(0, 3)}-${digits.slice(3)}`;
+    }
+
+    return `${digits.slice(0, 3)}-${digits.slice(3, 7)}-${digits.slice(7, 11)}`;
+};
+
 export function ApplicationModal({ isOpen, onClose }: ApplicationModalProps) {
     const [formData, setFormData] = useState({
         name: "",
         phone: "",
+        track: "frontend",
         message: "",
     });
 
@@ -36,7 +48,21 @@ export function ApplicationModal({ isOpen, onClose }: ApplicationModalProps) {
             return;
         }
 
-        console.log("Submitting application with data:", formData);
+        const formattedPhone = formatPhoneNumber(formData.phone);
+
+        if (formattedPhone.length !== 13) {
+            setError("전화번호를 올바르게 입력해주세요.");
+            return;
+        }
+
+        const payload = {
+            ...formData,
+            phone: formattedPhone,
+        };
+
+        setFormData(payload);
+
+        console.log("Submitting application with data:", payload);
 
         setIsSubmitting(true);
 
@@ -49,7 +75,7 @@ export function ApplicationModal({ isOpen, onClose }: ApplicationModalProps) {
                         "Content-Type": "application/json",
                         Authorization: `Bearer ${PUBLIC_ANON_KEY}`,
                     },
-                    body: JSON.stringify(formData),
+                    body: JSON.stringify(payload),
                 },
             );
 
@@ -68,6 +94,7 @@ export function ApplicationModal({ isOpen, onClose }: ApplicationModalProps) {
             setFormData({
                 name: "",
                 phone: "",
+                track: "frontend",
                 message: "",
             });
 
