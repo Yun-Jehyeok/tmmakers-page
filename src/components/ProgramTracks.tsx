@@ -154,8 +154,9 @@ export function ProgramTracks() {
                         ROADMAP
                     </h2>
                     <p className="text-lg text-slate-400">
-                        프론트엔드 개발자가 되기 위한 전체 일정을 한눈에
-                        확인하세요.
+                        프론트엔드 개발자가 되기 위한 전체 일정을{" "}
+                        <br className="hidden max-md:block" />
+                        한눈에 확인하세요.
                     </p>
                 </motion.div>
 
@@ -206,9 +207,6 @@ export function ProgramTracks() {
                                             {phase.title}
                                         </h4>
                                     </div>
-                                    <span className="rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs text-slate-300">
-                                        {phase.accent}
-                                    </span>
                                 </div>
 
                                 <p className="mt-4 text-sm font-medium text-cyan-300">

@@ -349,7 +349,7 @@ export function JobPostings() {
                         {successHighlights.map((highlight) => (
                             <div
                                 key={highlight}
-                                className="rounded-2xl border border-white/10 bg-slate-950/60 px-5 py-4 text-center text-lg leading-6 text-slate-200 max-md:text-[15px]"
+                                className="rounded-2xl border border-white/10 bg-slate-950/60 px-5 py-4 text-center text-lg leading-6 text-slate-200 max-md:text-sm"
                             >
                                 {highlight}
                             </div>
