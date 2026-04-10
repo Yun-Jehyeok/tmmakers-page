@@ -187,7 +187,10 @@ export function ProgramTracks() {
                                 금액
                             </p>
                             <p className="mt-2 text-2xl font-bold text-white">
-                                월 250,000원
+                                첫달 무료
+                            </p>
+                            <p className="mt-1 text-sm font-medium text-cyan-100/90">
+                                이후 월 250,000원
                             </p>
                         </div>
                     </div>
